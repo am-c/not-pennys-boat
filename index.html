@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:title" content="Not Penny's Boat | Acates Media">
+<meta property="og:url" content="https://acatesmedia.com">
+<meta property="og:description" content="Interactive canvas animation of Charlie from Lost">
+<meta property="og:image" content="">
+
+<meta property="og:locale" content="en_US">
+    <meta name="keywords" content="LOST, not pennys boat, acates media">
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <title>Not Penny's Boat | Acates Media</title>
+
+  <style>
+body {
+  overflow: hidden;
+}
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" ></script>
+<script>
+  $( document ).ready(function() {
+    $(".npb").hide();
+
+}); 
+  
+  </script>
+  <script defer="" src="slider.js"></script>
+  <script defer="" src="window.js"></script>
+</head>
+<body>
+      <div id="content">
+        <div class="padding_wrapper">
+            <div class="drawer_container" id="na_shapes">
+              <div class="canvas_container non_selectable">
+                <img class="npb" src="npb.png">
+          
+                <canvas class="non_selectable" width="400" height="400" style="position: absolute; top: 0px; left: 0px; width: 400px; height: 400px;"></canvas>
+               
+              </div>
+              
+            </div>
+            <img class="logo" src="images/the-looking-glass.png">
+          </div>
+        <div class="na_water_slider" draggable="true" id="na_shapes_sl0"> </div>
+</body>
+</html>

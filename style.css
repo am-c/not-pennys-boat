@@ -1,0 +1,177 @@
+ canvas {
+  touch-action: none;
+}
+ 
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+/*     -webkit-text-size-adjust: 100%; */
+    background-image: url('images/lg-hatch.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .slider_container {
+    margin: 0 auto;
+    padding: 25px 0 25px 0;
+    width: 90%;
+    max-width: 380px;
+  }
+  
+  .slider_left_gutter,
+  .slider_right_gutter {
+    position: absolute;
+    height: 4px;
+    top: 18px;
+    border-radius: 2px;
+  }
+  
+  .slider_knob {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: ew-resize;
+    touch-action: none;
+  }
+  
+  .slider_left_gutter,
+  .slider_right_gutter {
+    top: -2px;
+  }
+  
+  .slider_right_gutter {
+    opacity: 0.2;
+  }
+  
+  .slider_knob {
+    left: -20px;
+    top: -20px;
+  }
+  
+  .non-selectable {
+   -webkit-user-select: none;
+   -ms-user-select: none; 
+   user-select: none; 
+  }
+  .drawer_container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 2.3em auto 2em auto;
+    padding: 0;
+    user-select: none;
+  }
+  
+  .drawer_container:after {
+    padding-top: 66%;
+    display: block;
+    content: '';
+  }
+  
+  .drawer_container {
+    max-width: 400px;
+  }
+  
+  .drawer_container:after {
+    padding-top: 100%;
+  }
+  
+  .na_water_slider .slider_left_gutter,
+  .na_water_slider .slider_right_gutter,
+  .na_water_slider .slider_knob {
+    background: #86dcf7;
+    -webkit-animation: filter-animation 2s infinite;
+    animation: filter-animation 2s infinite;
+    border: 1px solid black;
+  }
+  
+  .canvas_container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border: 1px solid #40221b;
+    border-radius: 50%;
+  }
+  
+  .npb {
+    position: absolute;
+    width: 135%;
+    transform: scale(.9);
+    top: 3%;
+    left: -30%;
+    opacity: .8;
+    border-radius: 300%;
+    transform: rotate(-5deg);
+    overflow: hidden;
+    animation: slam-animation .2s;
+    animation-iteration-count: 1;
+  }
+  
+
+  
+  @keyframes slam-animation {
+    from {
+      opacity: 0;
+      transform: scale(.8);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes filter-animation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+  
+    50% {
+      filter: hue-rotate(100deg);
+    }
+  
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+        background-image: url('images/water.jpg') !important;
+        background-position: center;
+    }
+
+    .logo {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .na_water_slider .slider_left_gutter,
+    .na_water_slider .slider_right_gutter,
+    .na_water_slider .slider_knob {
+      background: #eaf3a5;
+    }
+}
+@media (min-width: 1200px) {
+.logo {
+    display: block;
+    width: 150px;
+    position: absolute;
+    right: 1%;
+    top: 0;
+  }
+}
